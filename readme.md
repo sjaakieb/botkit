@@ -18,7 +18,6 @@ Botkit offers everything you need to design, build and operate an app:
 Plus, Botkit works with all the NLP services (like Microsoft LUIS and IBM Watson), can use any type of database you want, and runs on almost any hosting platform.
 
 # Install Botkit
-
 Botkit is a Node.js module, and works with Node and npm.
 
 ### **Botkit Studio**
@@ -61,7 +60,7 @@ Then, add Botkit to your application code:
 ```
 var Botkit = require('botkit');
 
-var controller = Botkit.slackbot(configuration);
+var controller = Botkit.anywhere(configuration);
 
 controller.hears('hello','direct_message', function(bot, message) {
     bot.reply(message,'Hello yourself!');
@@ -157,8 +156,10 @@ controller.middleware.send.use(function(bot, message, next) {
 * [Storing Information](docs/storage.md)
 * [Logging](docs/logging.md)
 * Platforms
+  * [Web and Apps](docs/readme-web.md)
   * [Slack](docs/readme-slack.md)
   * [Cisco Spark](docs/readme-ciscospark.md)
+  * [Cisco Jabber](docs/readme-ciscojabber.md)
   * [Microsoft Teams](docs/readme-teams.md)
   * [Facebook Messenger](docs/readme-facebook.md)
   * [Twilio SMS](docs/readme-twiliosms.md)
